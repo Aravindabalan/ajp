@@ -1,0 +1,5 @@
+Hi,
+
+Hello Friends..! 
+Welcome to you Learn AJAX...!
+This is demo Text file.

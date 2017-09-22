@@ -1,0 +1,36 @@
+<html>
+    <body>
+    
+    <script language="javascript" type="text/javascript" >
+    function send_with_ajax(){
+     if (window.XMLHttpRequest || window.ActiveXObject) {
+       if (window.ActiveXObject) {
+         try {
+           xhr = new ActiveXObject("Msxml2.XMLHTTP");
+         } catch(exception) {
+           xhr = new ActiveXObject("Microsoft.XMLHTTP");
+         }
+       } else {
+          xhr = new XMLHttpRequest(); 
+       }
+     } else {
+        alert("Your browser does not support XMLHTTP Request...!");
+     }
+    
+     xhr.open("GET", "ajaxdemo.txt", true);    // Make sure file is in same server
+     xhr.send(null);
+    
+     xhr.onreadystatechange = function(){ 
+       if (xhr.readyState == xhr.DONE){
+         if ((xhr.status == 200) || (xhr.status == 0)){
+           alert("Current StatusText : " + xhr.statusText + "\n\nCurrent Status : " + xhr.status + "\n\nCurrent State : " + xhr.readyState + "\n\nResponse : " + xhr.responseText);
+         }
+       }
+     };
+    }
+    </script>
+    
+    <button onClick="send_with_ajax()">Get Contain</button>
+    
+    </body>
+    </html>				

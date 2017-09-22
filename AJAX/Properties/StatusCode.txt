@@ -1,0 +1,6 @@
+Constant            Name	    State Value	Description
+UNSENT	            0	    uninitialized open() method has not been called.
+OPENED	            1	    unsend send() method has not yet been called.
+HEADERS_RECEIVED	2	    send send() method has been called and headers and status data are available.
+LOADING	            3	    receiving Data receiving from server and responseText holds the receiving data.
+DONE	            4	    completed Ajax request finished.
